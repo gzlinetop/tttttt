@@ -1,0 +1,74 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0d6efd" />
+  <title>Mi Calculadora PWA</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Meta para PWA y optimización -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Calculadora</h1>
+      <small>PWA simple</small>
+    </header>
+
+    <section class="calculator" role="application" aria-label="Calculadora">
+      <div class="display" id="display" aria-live="polite">0</div>
+
+      <div class="keys">
+        <button class="btn light" data-action="clear">C</button>
+        <button class="btn light" data-action="back">←</button>
+        <button class="btn light" data-value="(">(</button>
+        <button class="btn op" data-value=")">)</button>
+
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn op" data-value="/">÷</button>
+
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn op" data-value="*">×</button>
+
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn op" data-value="-">−</button>
+
+        <button class="btn" data-value="0">0</button>
+        <button class="btn" data-value=".">.</button>
+        <button class="btn equal" data-action="equals">=</button>
+        <button class="btn op" data-value="+">+</button>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <p>Offline-ready (service worker)</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    // Registrar service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').then(function(reg) {
+        // registrado
+        // console.log('SW registrado', reg);
+      }).catch(function(err) {
+        // console.log('SW fallo', err);
+      });
+    }
+  </script>
+</body>
+</html>
