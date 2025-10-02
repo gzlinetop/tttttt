@@ -1,14 +1,23 @@
 // manifest.json
 {
+  "id": "/calculator-pwa/",
   "name": "Mi Calculadora PWA",
   "short_name": "Calculadora",
-  "description": "Una calculadora simple en forma de PWA - lista para subir a PWABuilder",
+  "description": "Calculadora simple como PWA — offline, notificaciones y sincronización en background (ejemplo).",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#f4f7fb",
   "theme_color": "#0d6efd",
-  "orientation": "portrait-primary",
+  "lang": "es-ES",
+  "dir": "ltr",
   "icons": [
+    {
+      "src": "icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
     {
       "src": "icons/icon-192.png",
       "sizes": "192x192",
@@ -19,5 +28,23 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "screenshots": [
+    {
+      "src": "icons/screen-1.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["utilities","productivity"],
+  "shortcuts": [
+    {
+      "name": "Abrir calculadora",
+      "short_name": "Abrir",
+      "description": "Abrir rápida la calculadora",
+      "url": "./index.html",
+      "icons": [{ "src": "icons/icon-72.png", "sizes": "72x72", "type": "image/png" }]
+    }
+  ],
+  "prefer_related_applications": false
 }
