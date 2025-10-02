@@ -1,3 +1,4 @@
+// manifest.json
 {
   "id": "/",
   "name": "Mi Calculadora PWA",
@@ -31,14 +32,6 @@
       "purpose": "any maskable"
     }
   ],
-  "screenshots": [
-    {
-      "src": "/icons/screen-1.png",
-      "sizes": "540x720",
-      "type": "image/png"
-    }
-  ],
-  "categories": ["utilities", "productivity"],
   "shortcuts": [
     {
       "name": "Abrir calculadora",
@@ -48,5 +41,6 @@
       "icons": [{ "src": "/icons/icon-72.png", "sizes": "72x72", "type": "image/png" }]
     }
   ],
+  "categories": ["utilities", "productivity"],
   "prefer_related_applications": false
 }
